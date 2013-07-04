@@ -1,0 +1,24 @@
+{
+  "name": "The Old Reader Full Feed",
+  "description": "show full story of the current entry in the old reader.",
+  "manifest_version": 2,
+  "version": "0.0.1",
+  "permissions": ["tabs", "http://*/*", "https://*/*"],
+  "background": {
+    "page": "background.html"
+  },
+  "page_action": {
+    "default_icon": "btn.png",
+    "default_title": "Fetch SITEINFO"
+  },
+  "content_scripts": [
+    {
+      "js": ["fullfeed.js"],
+      "css": ["fullfeed.css"],
+      "matches": [
+        "http://theoldreader.com/*",
+        "https://theoldreader.com/*"
+      ]
+    }
+  ]
+}
